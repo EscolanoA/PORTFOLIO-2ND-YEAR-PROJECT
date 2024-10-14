@@ -1,0 +1,78 @@
+body {
+    background: url("../img/Accueil-background.jpg") fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    filter: brightness(0.7) blur(2px);
+    z-index: -1;
+}
+
+.test {
+    background-color: rgba(0,0,0,0.9);
+    width: 85%;
+    height: 10%;
+    border-radius: 1vw;
+    animation: expand 4s forwards;
+}
+
+@keyframes expand {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 85%;
+    }
+  }
+
+.cursor {
+    display: inline-block;
+    width: 0.5vw;
+    height: 6vh;
+    background-color: white;
+    animation: blink 0.7s infinite;
+}
+
+.typewritetext {
+    color: white;
+    font-size: calc(0.5vw + 6vh);
+}
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    animation: slide-down 4s ease forwards;
+}
+  
+.collapse.show {
+    position: static !important;
+    height: auto !important;
+    overflow: visible !important;
+    display: block !important;
+}
+  
+  @keyframes slide-down {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}

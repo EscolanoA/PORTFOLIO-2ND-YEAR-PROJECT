@@ -1,0 +1,53 @@
+.image-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10%;
+    flex-direction: column;
+  }
+  
+  .image-container img {
+    height: 500px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .image-container img:hover {
+    transform: scale(1.1);
+  }
+
+.label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3vw;
+    background-color: rgba(0,0,0,0.9);
+    width: 85%;
+    height: 10%;
+    border-radius: 1vw;
+}
+  
+body {
+    background: linear-gradient(to top, #340138 0%, #080808 100%) fixed;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    animation: slide-down 4s ease forwards;
+}
+  @keyframes slide-down {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+  
+  
+  
